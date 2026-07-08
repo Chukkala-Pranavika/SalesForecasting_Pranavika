@@ -190,7 +190,7 @@ elif page == "Anomaly Report":
 
     # Monthly sales
     monthly_sales = (
-        df.groupby(pd.Grouper(key="Order Date", freq="M"))["Sales"]
+        df.groupby(pd.Grouper(key="Order Date", resample("ME"))["Sales"]
         .sum()
         .reset_index()
     )
