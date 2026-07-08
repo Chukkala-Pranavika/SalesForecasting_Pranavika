@@ -71,7 +71,7 @@ if page == "Sales Overview":
         selected_category = st.selectbox(
             "Select Category",
             ["All"] + sorted(df["Category"].unique().tolist())
-    )
+        )
 
     filtered_df = df.copy()
 
@@ -98,10 +98,9 @@ if page == "Sales Overview":
 
     # Monthly Sales Trend
     monthly_sales = (
-        filtered_df
-        .set_index("Order Date")
-        .resample("ME")["Sales"]
-        .sum()
+        filtered_df.set_index("Order Date")
+                   .resample("ME")["Sales"]
+                   .sum()
     )
 
     fig2, ax2 = plt.subplots(figsize=(10,4))
@@ -190,21 +189,24 @@ elif page == "Anomaly Report":
 
     # Monthly sales
     monthly_sales = (
-        df.groupby(pd.Grouper(key="Order Date", resample("ME"))["Sales"]
-        .sum()
-        .reset_index()
-    )
+        df.set_index("Order Date")
+          .resample("ME")["Sales"]
+          .sum()
+          .reset_index()
+        )
     
     # Isolation Forest
     model = IsolationForest(
         contamination=0.10,
         random_state=42
-    )
+        )
     
     monthly_sales["Anomaly"] = model.fit_predict(monthly_sales[["Sales"]])
     
     # Keep only anomalies
     anomalies = monthly_sales[monthly_sales["Anomaly"] == -1]
+
+
     
     # Display table
     st.dataframe(
@@ -265,5 +267,7 @@ elif page == "Product Demand Segments":
     })
     
     st.table(strategy)
+
+        
 
         
