@@ -99,7 +99,8 @@ if page == "Sales Overview":
     # Monthly Sales Trend
     monthly_sales = (
         filtered_df
-        .groupby(pd.Grouper(key="Order Date", freq="M"))["Sales"]
+        .set_index("Order Date")
+        .resample("ME")["Sales"]
         .sum()
     )
 
