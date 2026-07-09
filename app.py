@@ -89,7 +89,7 @@ if page == "Sales Overview":
     # Sales by Year
     yearly_sales = filtered_df.groupby(filtered_df["Order Date"].dt.year)["Sales"].sum()
 
-    fig, ax = plt.subplots(figsize=(8,4))
+    fig, ax = plt.subplots(figsize=(6,3))
     yearly_sales.plot(kind="bar", ax=ax)
     ax.set_title("Total Sales by Year")
     ax.set_ylabel("Sales")
@@ -103,7 +103,7 @@ if page == "Sales Overview":
                    .sum()
     )
 
-    fig2, ax2 = plt.subplots(figsize=(10,4))
+    fig2, ax2 = plt.subplots(figsize=(7,3))
     monthly_sales.plot(ax=ax2)
 
     ax2.set_title("Monthly Sales Trend")
@@ -140,7 +140,7 @@ elif page == "Forecast Explorer":
 
     st.subheader(f"{selection} Forecast")
 
-    fig, ax = plt.subplots(figsize=(8,4))
+    fig, ax = plt.subplots(figsize=(6,3))
 
     ax.plot(
         forecast_df["Month"],
@@ -267,7 +267,5 @@ elif page == "Product Demand Segments":
     })
     
     st.table(strategy)
-
-        
 
         
