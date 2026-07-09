@@ -4,6 +4,11 @@
 
 This project analyzes historical retail sales data to forecast future sales and optimize inventory decisions. The project includes exploratory data analysis, time series forecasting, anomaly detection, product demand segmentation, and an interactive Streamlit dashboard.
 
+## 🚀 Live Demo
+
+**🌐 Streamlit App:**  
+https://salesforecastingpranavika-ijugfmfbff6u8tzpegq883.streamlit.app/
+
 ---
 
 ## 🎯 Features
@@ -15,8 +20,6 @@ This project analyzes historical retail sales data to forecast future sales and 
 - Sales Anomaly Detection using Isolation Forest
 - Product Demand Segmentation using K-Means Clustering
 - Interactive Streamlit Dashboard
-
----
 
 ## 🛠️ Technologies Used
 
@@ -30,11 +33,8 @@ This project analyzes historical retail sales data to forecast future sales and 
 - XGBoost
 - Streamlit
 
----
-
 ## 📂 Project Structure
 
-```text
 SalesForecasting_Pranavika/
 │
 ├── analysis.ipynb
@@ -44,9 +44,6 @@ SalesForecasting_Pranavika/
 ├── Summary.docx
 ├── train.csv
 ├── charts/
-```
-
----
 
 ## ▶️ Run the Project
 
@@ -62,8 +59,6 @@ Run the Streamlit application:
 streamlit run app.py
 ```
 
----
-
 ## 📊 Dashboard Pages
 
 - 📈 Sales Overview
@@ -71,10 +66,7 @@ streamlit run app.py
 - 🚨 Anomaly Report
 - 📦 Product Demand Segments
 
----
-
 ## 👩‍💻 Author
 
-**Pranavika Chukkala**
-
+**Pranavika Chukkala**  
 B.Tech – Computer Science Engineering
