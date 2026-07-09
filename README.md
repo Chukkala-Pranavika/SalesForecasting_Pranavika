@@ -37,19 +37,19 @@ https://salesforecastingpranavika-ijugfmfbff6u8tzpegq883.streamlit.app/
 
 SalesForecasting_Pranavika/
 
-   analysis.ipynb
-   
-   app.py
-   
-   requirements.txt
-   
-   README.md
-   
-   Summary.docx
-   
-   train.csv
-   
-   charts/
+      analysis.ipynb
+      
+      app.py
+      
+      requirements.txt
+      
+      README.md
+      
+      Summary.docx
+      
+      train.csv
+      
+      charts/
 
 ## ▶️ Run the Project
 
